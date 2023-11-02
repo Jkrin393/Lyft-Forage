@@ -6,27 +6,27 @@ from battery.batteryTypes import nubbin_battery, spindler_battery
 class CarFactory(Car):
     @classmethod
     def create_calliope(self, current_date, last_service_date, current_mileage, last_service_mileage) -> Car:
-        make = "Calliope"
-        return Car(make)
+        model = "Calliope"
+        return Car(model)
     
     @classmethod
     def create_glissade(self, current_date, last_service_date, current_mileage, last_service_mileage) -> Car:
-        make = "Glissade"
-        return Car(make)
+        model = "Glissade"
+        return Car(model)
     
     @classmethod
     def create_palindrome(self, current_date, last_service_date, current_mileage, last_service_mileage) -> Car:
-        make = "Palindrome"
-        return Car(make)
+        model = "Palindrome"
+        return Car(model)
     
     @classmethod
     def create_rorschach(self, current_date, last_service_date, current_mileage, last_service_mileage) -> Car:
-        make = "rorschach"
-        return Car(make)
+        model = "rorschach"
+        return Car(model)
     
     @classmethod
     def create_thovex(self, current_date, last_service_date, current_mileage, last_service_mileage) -> Car:
-        make = "Thovex"
-        return Car(make)
+        model = "Thovex"
+        return Car(model)
     
 
