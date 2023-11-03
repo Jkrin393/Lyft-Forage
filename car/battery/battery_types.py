@@ -3,10 +3,9 @@ from datetime import date, timedelta
 
 DAYS_IN_YEAR = 365.25
 SERVICE_INTERVAL_NUBBIN = 2
-SERVICE_INTERVAL_SPINDLER = 4
+SERVICE_INTERVAL_SPINDLER = 4 
 class NubbinBattery(Battery):
     def __init__(self, last_service_date, current_date):
-        super().__init__()
         self.last_service_date = last_service_date
         self.current_date = current_date
 
@@ -22,7 +21,6 @@ class NubbinBattery(Battery):
 
 class SpindlerBattery(Battery):
     def __init__(self, last_service_date, current_date):
-        super().__init__()
         self.last_service_date = last_service_date
         self.current_date = current_date
 
