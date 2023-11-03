@@ -1,4 +1,4 @@
-from car.engine.engine import Engine
+from .engine import Engine
 
 CAPULET_SERVICE_MILAGE = 30000
 WILLOUGHBY_SERVICE_MILEAGE = 60000
@@ -11,7 +11,7 @@ class CapuletEngine(Engine):
         self.last_service_mileage = last_service_mileage
 
     def needs_service(self) ->bool:
-        return self.current_mileage - self.last_service_mileage > CAPULET_SERVICE_MILAGE
+        return self.current_mileage - self.last_service_mileage >= CAPULET_SERVICE_MILAGE
 
 class SternmanEngine(Engine):
     def __init__(self,  warning_light_is_on):
@@ -28,7 +28,7 @@ class WilloughbyEngine(Engine):
         self.last_service_mileage = last_service_mileage
 
     def engine_should_be_serviced(self):
-        return self.current_mileage - self.last_service_mileage > WILLOUGHBY_SERVICE_MILEAGE
+        return self.current_mileage - self.last_service_mileage >= WILLOUGHBY_SERVICE_MILEAGE
 
 
 
