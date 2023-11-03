@@ -9,7 +9,8 @@ class TestCarFactory(unittest.TestCase):
         last_service_date = date(2022, 1, 1)
         current_mileage = 40000
         last_service_mileage = 10000
-        car = CarFactory.create_calliope(current_date, last_service_date, current_mileage, last_service_mileage)
+        tire_wear = [.1, .6, .7, .4]
+        car = CarFactory.create_calliope(current_date, last_service_date, current_mileage, last_service_mileage, tire_wear)
         self.assertIsInstance(car, Car)
 
     def test_create_calliope(self):
@@ -18,7 +19,8 @@ class TestCarFactory(unittest.TestCase):
         last_service_date = date(2022, 1, 1)
         current_mileage = 40000
         last_service_mileage = 10000
-        car = CarFactory.create_calliope(current_date, last_service_date, current_mileage, last_service_mileage)
+        tire_wear = [.1, .6, .7, .4]
+        car = CarFactory.create_calliope(current_date, last_service_date, current_mileage, last_service_mileage, tire_wear)
         self.assertIsInstance(car, Car)
 
     def test_create_glissade(self):
@@ -27,7 +29,8 @@ class TestCarFactory(unittest.TestCase):
         last_service_date = date(2022, 1, 1)
         current_mileage = 70000
         last_service_mileage = 10000
-        car = CarFactory.create_glissade(current_date, last_service_date, current_mileage, last_service_mileage)
+        tire_wear = [.1, .6, .7, .4]
+        car = CarFactory.create_glissade(current_date, last_service_date, current_mileage, last_service_mileage, tire_wear)
         self.assertIsInstance(car, Car)
 
     def test_create_palindrome(self):
@@ -35,7 +38,8 @@ class TestCarFactory(unittest.TestCase):
         current_date = date(2023, 1, 1)
         last_service_date = date(2022, 1, 1)
         service_light_status = True
-        car = CarFactory.create_palindrome(current_date, last_service_date, service_light_status)
+        tire_wear = [.1, .6, .7, .4]
+        car = CarFactory.create_palindrome(current_date, last_service_date, service_light_status, tire_wear)
         self.assertIsInstance(car, Car)
 
     def test_create_rorschach(self):
@@ -44,7 +48,8 @@ class TestCarFactory(unittest.TestCase):
         last_service_date = date(2022, 1, 1)
         current_mileage = 70000
         last_service_mileage = 10000
-        car = CarFactory.create_rorschach(current_date, last_service_date, current_mileage, last_service_mileage)
+        tire_wear = [.1, .6, .7, .4]
+        car = CarFactory.create_rorschach(current_date, last_service_date, current_mileage, last_service_mileage, tire_wear)
         self.assertIsInstance(car, Car)
 
     def test_create_thovex(self):
@@ -53,7 +58,8 @@ class TestCarFactory(unittest.TestCase):
         last_service_date = date(2022, 1, 1)
         current_mileage = 40000
         last_service_mileage = 10000
-        car = CarFactory.create_thovex(current_date, last_service_date, current_mileage, last_service_mileage)
+        tire_wear = [.1, .6, .7, .4]
+        car = CarFactory.create_thovex(current_date, last_service_date, current_mileage, last_service_mileage, tire_wear)
         self.assertIsInstance(car, Car)
 
 if __name__ == '__main__':
