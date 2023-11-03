@@ -1,6 +1,6 @@
 from car import Car
-from engine.engineTypes import capulet_engine, sternman_engine, willoughby_engine
-from battery.batteryTypes import nubbin_battery, spindler_battery
+from engine.engine_types import CapuletEngine, SternmanEngine, WilloughbyEngine
+from battery.battery_types import SpindlerBattery, NubbinBattery
 
 
 class CarFactory(Car):
