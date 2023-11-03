@@ -3,7 +3,6 @@ from datetime import datetime
 from car.battery.battery_types import SpindlerBattery, NubbinBattery
 from car.engine.engine_types import CapuletEngine, SternmanEngine, WilloughbyEngine
 from car.carfactory import CarFactory
-from car.car import Car
 
 
 class TestCalliope(unittest.TestCase):
