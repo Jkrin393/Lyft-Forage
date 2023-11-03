@@ -23,12 +23,11 @@ class CarFactory(Car):
         return Car(model)
     
     @classmethod
-    def create_palindrome(self, current_date, last_service_date, current_mileage, last_service_mileage) -> Car:
+    def create_palindrome(self, current_date, last_service_date, service_light_status) -> Car:
         model = "Palindrome"
         self.current_date = current_date
         self.last_service_date = last_service_date
-        self.current_mileage = current_mileage
-        self.last_service_mileage = last_service_mileage
+        self.service_light_status = service_light_status
         return Car(model)
     
     @classmethod
