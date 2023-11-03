@@ -12,7 +12,7 @@ class NubbinBattery(Battery):
 
     def needs_service(self) -> bool:
         service_interval_days = SERVICE_INTERVAL * DAYS_IN_YEAR
-        return self.current_date - self.last_service_date >= service_interval_days
+        return self.current_date - self.last_service_date > service_interval_days
 
 class SpindlerBattery(Battery):
     def __init__(self, last_service_date, current_date):
@@ -22,5 +22,5 @@ class SpindlerBattery(Battery):
 
     def needs_service(self) -> bool:
         service_interval_days = SERVICE_INTERVAL * DAYS_IN_YEAR
-        return self.current_date - self.last_service_date >= service_interval_days
+        return self.current_date - self.last_service_date > service_interval_days
  

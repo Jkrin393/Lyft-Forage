@@ -7,45 +7,41 @@ class CarFactory(Car):
     @classmethod
     def create_calliope(self, current_date, last_service_date, current_mileage, last_service_mileage) -> Car:
         model = "Calliope"
-        self.current_date = current_date
-        self.last_service_date = last_service_date
-        self.current_mileage = current_mileage
-        self.last_service_mileage = last_service_mileage
-        return Car(model)
+        engine = CapuletEngine(current_mileage, last_service_mileage)
+        battery = SpindlerBattery(current_date, last_service_date)
+        car = Car(engine, battery)
+        return car
     
     @classmethod
     def create_glissade(self, current_date, last_service_date, current_mileage, last_service_mileage) -> Car:
         model = "Glissade"
-        self.current_date = current_date
-        self.last_service_date = last_service_date
-        self.current_mileage = current_mileage
-        self.last_service_mileage = last_service_mileage        
-        return Car(model)
+        engine = WilloughbyEngine(current_mileage, last_service_mileage)
+        battery = SpindlerBattery(current_date, last_service_date)
+        car = Car(engine, battery)    
+        return car
     
     @classmethod
     def create_palindrome(self, current_date, last_service_date, service_light_status) -> Car:
         model = "Palindrome"
-        self.current_date = current_date
-        self.last_service_date = last_service_date
-        self.service_light_status = service_light_status
-        return Car(model)
+        engine = SternmanEngine(service_light_status)
+        battery = SpindlerBattery(current_date, last_service_date)
+        car = Car(engine, battery)
+        return car
     
     @classmethod
     def create_rorschach(self, current_date, last_service_date, current_mileage, last_service_mileage) -> Car:
         model = "rorschach"
-        self.current_date = current_date
-        self.last_service_date = last_service_date
-        self.current_mileage = current_mileage
-        self.last_service_mileage = last_service_mileage
-        return Car(model)
+        engine = WilloughbyEngine(current_mileage, last_service_mileage)
+        battery = NubbinBattery(current_date, last_service_date)
+        car = Car(engine, battery)
+        return car
     
     @classmethod
     def create_thovex(self, current_date, last_service_date, current_mileage, last_service_mileage) -> Car:
         model = "Thovex"
-        self.current_date = current_date
-        self.last_service_date = last_service_date
-        self.current_mileage = current_mileage
-        self.last_service_mileage = last_service_mileage
-        return Car(model)
+        engine = CapuletEngine(current_mileage, last_service_mileage)
+        battery = NubbinBattery(current_date, last_service_date)
+        car = Car(engine, battery)
+        return car
     
 
